@@ -27,6 +27,11 @@ const routes: Routes = [
         loadChildren: './pages/shop/shop.module#ShopModule'
       },
       {
+        path: 'biblioteca',
+        loadChildren: './pages/biblioteca/biblioteca.module#BibliotecaModule'
+      },
+      {
+
         path: 'estudiantes',
         loadChildren: './pages/estudiantes/estudiantes.module#EstudiantesModule'
       }
