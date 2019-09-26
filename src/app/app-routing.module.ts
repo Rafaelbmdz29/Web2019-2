@@ -31,7 +31,6 @@ const routes: Routes = [
         loadChildren: './pages/biblioteca/biblioteca.module#BibliotecaModule'
       },
       {
-
         path: 'estudiantes',
         loadChildren: './pages/estudiantes/estudiantes.module#EstudiantesModule'
       }
