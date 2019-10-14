@@ -1,6 +1,6 @@
 <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Dashboard</a>
+    <a class="navbar-brand" href="#">Menu</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,22 +9,66 @@
         <li class="nav-item active">
           <a class="nav-link" routerLink="../login">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Administracion
+            Academic
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="administration/roles">Roles</a>
-            <a class="dropdown-item" routerLink="administration/users">Usuarios</a>
+            <a class="dropdown-item" routerLink="academic/grades">Grades</a>
+            <a class="dropdown-item" routerLink="academic/subjects">Subjects</a>
             <div class="dropdown-divider"></div>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+
+
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Administracion
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="administration/permissions">Permissions</a>
+          <a class="dropdown-item" routerLink="administration/roles">Roles</a>
+          <a class="dropdown-item" routerLink="administration/users">Usuarios</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Library
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="biblioteca/areas">Areas</a>
+            <a class="dropdown-item" routerLink="biblioteca/autores">Autores</a>
+            <a class="dropdown-item" routerLink="biblioteca/editorial">Editorial</a>
+            <a class="dropdown-item" routerLink="biblioteca/existencias">Existencias</a>
+            <a class="dropdown-item" routerLink="biblioteca/libro">Libros</a>
+            <a class="dropdown-item" routerLink="biblioteca/tipo">Tipo</a>
+            <div class="dropdown-divider"></div>
+          </div>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="estudiantes/information" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Student
+          </a>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Shop
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="shop/articles">Article</a>
+            <a class="dropdown-item" routerLink="shop/categories">category</a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </li>
+
+
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
