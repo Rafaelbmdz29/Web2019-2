@@ -1,43 +1,66 @@
+
 <hr>
 <div class="container-fluid col-6">
-  <h3 class="card-header text-success">Autores</h3>
+   
+  <h3 class="card-header text-success">{{titulo}}</h3>
+
   <form>
     <div class="form-row">
       <div class="form-group col-md-12">
-        <label for="inputEmail4">Id Author</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Author Id.">
+        <label for="inputEmail4">Id Autor</label>
+        <input type="text" [(ngModel)]="idAutor" name="idAutor" class="form-control" placeholder="Author Id.">
       </div>
 
       <div class="form-group col-md-6">
+    
         <label for="inputPassword5">Primer Nombre</label>
-        <input type="text" class="form-control" id="inputPassword5" placeholder="first name">
+        <input type="text"  [(ngModel)]="nombre1" name="nombre1" class="form-control" placeholder="first name">
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputPassword6">Segundo Nombre</label>
-        <input type="text" class="form-control" id="inputPassword6" placeholder="second name">
+        <input type="text" [(ngModel)]="nombre2" name="nombre2" class="form-control"  placeholder="second name">
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputPassword7">Primer Apellido</label>
-        <input type="text" class="form-control" id="inputPassword7" placeholder="First surname">
+        <input type="text" [(ngModel)]="apellido1" name="apellido1" class="form-control" placeholder="First surname">
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputPassword8">Segundo Apellido</label>
-        <input type="text" class="form-control" id="inputPassword8" placeholder="second surname">
+        <input type="text" [(ngModel)]="apellido2" name="apellido2" class="form-control" placeholder="second surname">
       </div>
-      
+
+      <div class="form-group col-md-6">
+        <label for="inputPassword8">Fecha Nacimiento</label>
+        <input type="date" [(ngModel)]="fechanac" name="fechanac" class="form-control">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputPassword8">Nacionalidad</label>
+        <input type="text" [(ngModel)]="nacionalidad" name="nacionalidad" class="form-control"  placeholder="Nacionalidad">
+      </div>
+
       <div class="form-group col-md-6">
         <label for="inputPassword8">Telefono</label>
-        <input type="text" class="form-control" id="inputPassword8" placeholder="Telefono">
+        <input type="text" [(ngModel)]="telefono" name="telefono" class="form-control" placeholder="Telefono">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword8">Correo Electronico</label>
-        <input type="text" class="form-control" id="inputPassword8" placeholder="E-mail">
+        <label for="inputPassword8">Correo</label>
+        <input type="text" [(ngModel)]="correo" name="correo" class="form-control" placeholder="E-mail">
       </div>
 
     </div>
-    <button type="submit" class="btn btn-success">Enviar</button>
+    <button type="button" (click)="saveForm()" class="btn btn-success">Enviar</button>
   </form>
+  <h6 class="text-primary">{{idAutor}}
+      {{nombre1}}
+      {{nombre2}}
+      {{apellido1}}
+      {{apellido2}}
+      {{fechanac}}
+      {{nacionalidad}}
+      {{telefono}}
+      {{correo}}</h6>
 </div>
