@@ -1,40 +1,48 @@
-<p>existencias works!</p><hr>
+<hr>
 <div class="container-fluid col-6">
-  <h3 class="card-header text-success">Existencias</h3>
+  <h3 class="card-header text-success">{{titulo}}</h3>
   <form>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Codigo Existencia</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Codigo">
+        <input type="text" [(ngModel)]="codE" name="codE" class="form-control"  placeholder="Codigo">
       </div>
 
       <div class="form-group col-md-6">
       <label for="">Libro</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>Seleccione</option>
+      <select class="form-control" [(ngModel)]="seleclibro"  name="seleclibro" >
+        <option></option>
       </select>
     </div>
 
       <div class="form-group col-md-6">
         <label for="">Editorial</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>Seleccione</option>
+        <select class="form-control" [(ngModel)]="selecEdito" name="selecEdito">
+          <option></option>
         </select>
       </div>
 
       <div class="form-group col-md-6">
         <label for="">Autor</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>Seleccione</option>
+        <select class="form-control" [(ngModel)]="selecAutor" name="selecAutor">
+          <option> </option>
         </select>
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputEmail4">Cantidad</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Cantidad">
+        <input type="text"  [(ngModel)]="Cantidad" name="Cantidad" class="form-control" placeholder="Cantidad">
       </div>
     </div>
-    <button type="submit" class="btn btn-success">Enviar</button>
+    <button type="button" (click)="saveForm()"  class="btn btn-success">Enviar</button>
   </form>
 
 </div>
+
+<h6 class="text-primary">{{codE}}
+  {{seleclibro}}
+  {{selecEdito}}
+  {{selecAutor}}
+  {{Cantidad}}
+</h6>
+

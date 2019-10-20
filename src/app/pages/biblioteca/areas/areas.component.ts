@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AreasComponent implements OnInit {
 
+  public titulo = "Formulario Áreas"
+  public codigo : string;
+  public nombre : string;
+  public descripcion : string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  //metodo para salvar formulario
+
+  saveForm() {
+    alert(this.nombre)
+
   }
 
 }

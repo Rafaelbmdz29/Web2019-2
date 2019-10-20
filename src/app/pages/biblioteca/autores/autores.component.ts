@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./autores.component.scss']
 })
 export class AutoresComponent implements OnInit {
-  public titulo = "Formulario Autores" 
+  public titulo = "Formulario Autores"
   public idAutor : string;
   public nombre1 : string;
   public nombre2 : string;
@@ -16,17 +16,16 @@ export class AutoresComponent implements OnInit {
   public nacionalidad : string;
   public telefono : string;
   public correo : string;
-  
+
   constructor() { }
 
-  
+
 
   ngOnInit() {
   }
 //metodo para salvar formulario
 
 saveForm(){
-
   alert(this.nombre1)
 
 }
