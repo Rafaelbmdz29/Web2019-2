@@ -1,25 +1,28 @@
 <hr>
 <div class="container-fluid col-6">
   <h3 class="card-header text-success">{{titulo}}</h3>
-
-  <form formGroup="tipoForm">
+{{tipoForm.value| json}}
+  <form [formGroup]="tipoForm">
     <div class="form-row">
       <div class="form-group col-md-12">
-        <label for="inputEmail4">Id Tipo</label>
-        <input type="text" FormControlName="idTipo" name="idTipo"  class="form-control"  placeholder="Tipo Id.">
+        <label>Id Tipo</label>
+        <input type="text" formControlName="idTipo" 
+         class="form-control"  placeholder="Tipo Id.">
       </div>
 
       <div class="form-group col-md-6">
-        <label for="inputPassword5">Tipo Libro</label>
-        <input type="text" FormControlName="tipoLibro" name="tipoLibro" class="form-control" placeholder="Nombre Tipo">
+        <label>Tipo Libro</label>
+        <input type="text" formControlName="tipoLibro" 
+         class="form-control" placeholder="Nombre Tipo">
       </div>
 
       <div class="form-group col-md-6">
-        <label for="inputPassword6">Descripcion</label>
-        <input type="text" FormControlName="descripcion" name="descripcion" class="form-control" placeholder="Descripcion Tipo">
+        <label>Descripcion</label>
+        <input type="text" formControlName="descripcion" 
+        class="form-control" placeholder="Descripcion Tipo">
       </div>
     </div>
-    <button type="button" class="btn btn-success">Enviar</button>
+    <button type="button" class="btn btn-success" (click)="saveForm()" [disabled]="tipoForm.invalid"    >Enviar</button>
   </form>
 </div>
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tipo',
@@ -12,21 +12,23 @@ public tipoForm: FormGroup; //paso 1 "tipoForm hace referencia al nombre del for
 
 //paso 2 inyeccion de dependecias
   constructor(protected fb:FormBuilder) {
-
+    this.createForm();
    } 
   ngOnInit() {
   }
       //paso 3 crear metodo
   createForm(){
-
     this.tipoForm = this.fb.group({
-
-      idTipo: ' ' ,
-      tipoLibro: ' ',
-      descripcion: ' '
-
+      idTipo:["",[Validators.required]],
+      tipoLibro: "",
+      descripcion: ""
     });
 
+  }
+  //metodo para salvar formulario
+
+  saveForm() {
+    
   }
 
 }
