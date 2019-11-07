@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-autores',
@@ -7,26 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutoresComponent implements OnInit {
   public titulo = "Formulario Autores"
-  public idAutor : string;
-  public nombre1 : string;
-  public nombre2 : string;
-  public apellido1 : string;
-  public apellido2 : string;
-  public fechanac : Date;
-  public nacionalidad : string;
-  public telefono : string;
-  public correo : string;
+  public autorForm: FormGroup;
 
-  constructor() { }
-
-
+  constructor(protected fb:FormBuilder) {
+    this.createForm();
+   }
 
   ngOnInit() {
   }
+  createForm(){
+    this.autorForm = this.fb.group({
+      code:["",[Validators.required]],
+      name:"",
+      lastname:"",
+      bd_year:"",
+      death_year:"",
+      bd_place:""
+
+    });
+
+  }
+
+
 //metodo para salvar formulario
 
 saveForm(){
-  alert(this.nombre1)
 
 }
 

@@ -1,41 +1,32 @@
 <hr>
 <div class="container-fluid col-6">
 <h3 class="card-header text-success">{{titulo}}</h3>
-  <form>
+  <form [formGroup]="editorialForm">
     <div class="form-row">
       <div class="form-group col-md-12">
         <label for="inputEmail4">Id Editorial</label>
-        <input type="text"  [(ngModel)]="codigoE" name="codigoE" class="form-control"  placeholder="Editorial Id.">
+        <input type="text" formControlName="code" 
+         class="form-control"  placeholder="Editorial Id.">
       </div>
 
       <div class="form-group col-md-6">
-        <label for="inputPassword5">Nombre Editorial</label>
-        <input type="text"  [(ngModel)]="nombre" name="nombre" class="form-control"  placeholder="Nombre Editorial">
+        <label for="inputPassword5">Descripcion Editorial</label>
+        <input type="text" formControlName="descripcion"
+         class="form-control"  placeholder="Descripcion Editorial">
       </div>
 
       <div class="form-group col-md-6">
-       <label for="inputPassword6">Direccion Editorial</label>
-       <input type="text"  [(ngModel)]="descripcion" name="descripcion" class="form-control"  placeholder="Direccion Editorial">
+       <label for="inputPassword6">Ciudad</label>
+       <input type="text" formControlName="country" 
+        class="form-control"  placeholder="Ciudad Editorial">
      </div>
-
-      <div class="form-group col-md-6">
-        <label for="inputPassword6">E-mail Editorial</label>
-        <input type="text"  [(ngModel)]="email" name="email" class="form-control"  placeholder="Email Editorial">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword6">Telefono Editorial</label>
-        <input type="text"  [(ngModel)]="telefono" name="telefono" class="form-control"  placeholder="Telefono Editorial">
-      </div>
-    </div>
-    <button type="button"(click)="saveForm()"  class="btn btn-success">Enviar</button>
+     </div>
+    <button type="button"(click)="saveForm()" [disabled]="editorialForm.invalid"   class="btn btn-success">Enviar</button>
   </form>
 </div>
 <div>
-  <h6 class="text-primary">{{codigoE}}
-    {{nombre}}
-    {{descripcion}}
-    {{email}}
-    {{telefono}}
+  <h6 class="text-primary">
+      {{editorialForm.value| json}}
   </h6>
 
 </div>
