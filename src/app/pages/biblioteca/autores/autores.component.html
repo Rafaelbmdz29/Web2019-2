@@ -1,4 +1,13 @@
-
+<table>
+  <tr>
+    <td>nombre</td>
+    <td>apellido</td>
+  </tr>
+  <tr *ngFor="let autor of authors">
+    <td>{{autor.name}}</td>
+    <td>{{autor.lastname}}</td>
+  </tr>
+</table>
 <hr>
 <div class="container-fluid col-6">
   <h3 class="card-header text-success">{{titulo}}</h3>

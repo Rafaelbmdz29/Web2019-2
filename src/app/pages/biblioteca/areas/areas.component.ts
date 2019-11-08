@@ -22,7 +22,7 @@ export class AreasComponent implements OnInit {
   createForm(){
     this.areaForm = this.fb.group({
       code:["",[Validators.required]],
-      descripcion:""
+      descripcion:["",[Validators.required]]
     });
 
   }

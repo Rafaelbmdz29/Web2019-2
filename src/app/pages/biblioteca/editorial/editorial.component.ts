@@ -22,8 +22,8 @@ export class EditorialComponent implements OnInit {
   createForm(){
     this.editorialForm = this.fb.group({
       code:["",[Validators.required]],
-      descripcion:"",
-      country:""
+      descripcion:["",[Validators.required]],
+      country:["",[Validators.required]]
 
     });
 
